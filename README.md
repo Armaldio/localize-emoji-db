@@ -1,1 +1,1 @@
-# localize-emoji-db
+# thyper

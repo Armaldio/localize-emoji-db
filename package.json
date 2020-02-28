@@ -1,0 +1,25 @@
+{
+  "name": "thyper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Armaldio/thyper.git",
+  "author": "Quentin Goinaud <armaldio@gmail.com>",
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "node dist/scripts/fetchEmojis.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/fs-extra": "^8.1.0",
+    "@types/node": "^13.7.6",
+    "@types/xml2js": "^0.4.5",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.2",
+    "xml2js": "^0.4.23"
+  }
+}

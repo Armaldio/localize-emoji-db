@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 14
+  - 13
+  - 12
+  - 10
+  - 8
+
+before_install:
+  - git clone https://github.com/unicode-org/cldr
+
+script:
+  - yarn build

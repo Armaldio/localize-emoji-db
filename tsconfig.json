@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "module": "CommonJS",
+    "target": "ES5",
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src"
+  ]
+}
