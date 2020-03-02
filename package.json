@@ -6,12 +6,14 @@
   "author": "Quentin Goinaud <armaldio@gmail.com>",
   "scripts": {
     "watch": "tsc -w",
-    "build": "node dist/scripts/fetchEmojis.js"
+    "build": "node dist/scripts/fetchEmojis.js",
+    "pr": "node dist/scripts/createPR.js"
   },
   "license": "MIT",
   "dependencies": {
     "app-root-path": "^3.0.0",
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^8.1.0",
+    "github-api": "^3.3.0"
   },
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",
