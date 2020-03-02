@@ -12,7 +12,7 @@ commit_website_files() {
 
 upload_files() {
   git remote add publish https://${GH_TOKEN}@github.com/Armaldio/localize-emoji-db.git > /dev/null 2>&1
-  git pull
+  git pull publish updates
   git push --quiet publish updates
 }
 
