@@ -8,6 +8,8 @@ node_js:
 
 before_install:
   - git clone https://github.com/unicode-org/cldr
+  - git checkout -b updates
+  - git pull
 
 script:
   - yarn build

@@ -6,14 +6,13 @@ setup_git() {
 }
 
 commit_website_files() {
-  git checkout -b updates
-  git add .
+  git add dist
   git commit --message "Build $TRAVIS_BUILD_NUMBER - Automated JSON update"
 }
 
 upload_files() {
   git remote add publish https://${GH_TOKEN}@github.com/Armaldio/localize-emoji-db.git > /dev/null 2>&1
-  git push --quiet --set-upstream publish updates
+  git push --quiet publish updates
 }
 
 setup_git
