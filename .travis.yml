@@ -11,6 +11,7 @@ before_install:
 
 script:
   - yarn build
-  - git add .
-  - git commit -m "Build $TRAVIS_BUILD_NUMBER - Automated JSON update"
-  - git push -u origin $TRAVIS_BRANCH
+
+after_success:
+  - chmod +x push.sh
+  - push.sh
