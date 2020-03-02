@@ -13,5 +13,6 @@ script:
   - yarn build
 
 after_success:
-  - chmod +x push.sh
-  - push.sh
+  - ls
+  - chmod +x ./push.sh
+  - ./push.sh
