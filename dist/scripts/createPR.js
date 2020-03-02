@@ -10,9 +10,7 @@ var createPR = function () { return tslib_1.__awaiter(void 0, void 0, void 0, fu
                 gh = new github_api_1.default({
                     token: process.env.GH_TOKEN
                 });
-                console.log('gh', gh);
                 repo = gh.getRepo('Armaldio', 'localize-emoji-db');
-                console.log('repo', repo);
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);
@@ -24,7 +22,6 @@ var createPR = function () { return tslib_1.__awaiter(void 0, void 0, void 0, fu
                     })];
             case 2:
                 pr = _a.sent();
-                console.log('pr', pr);
                 return [3, 4];
             case 3:
                 e_1 = _a.sent();

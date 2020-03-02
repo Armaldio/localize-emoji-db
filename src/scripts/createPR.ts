@@ -8,9 +8,7 @@ const createPR = async () => {
         token: process.env.GH_TOKEN
     })
 
-    console.log('gh', gh)
     const repo = gh.getRepo('Armaldio', 'localize-emoji-db')
-    console.log('repo', repo)
     try {
         const pr = await repo.createPullRequest({
             "title": "Updates",
@@ -18,7 +16,6 @@ const createPR = async () => {
             "head": "updates",
             "base": "master"
         })
-        console.log('pr', pr)
     } catch (e) {
         console.error(e)
     }
