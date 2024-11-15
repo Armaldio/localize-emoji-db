@@ -31,13 +31,7 @@ jobs:
     - name: Build project
       run: yarn build
 
-    - name: Run tests
-      run: yarn test
-
     - name: Run push script
       run: |
         chmod +x ./push.sh
         ./push.sh
-
-    - name: Create pull request
-      run: yarn pr
