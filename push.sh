@@ -1,13 +1,13 @@
 #!/bin/bash
 
 setup_git() {
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
+  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+  git config --global user.name "github-actions[bot]"
 }
 
 commit_website_files() {
   git add dist
-  git commit --message "Build $TRAVIS_BUILD_NUMBER - Automated JSON update"
+  git commit --message "Automated JSON update"
 }
 
 upload_files() {

@@ -3,3 +3,5 @@
 All files are available at: [/dist/emojis](/dist/emojis)
 
 NPM package in progress
+
+![CI](https://github.com/Armaldio/localize-emoji-db/workflows/CI/badge.svg)

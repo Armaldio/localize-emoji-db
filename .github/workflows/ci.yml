@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 13
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Clone cldr repository
+      run: |
+        git clone https://github.com/unicode-org/cldr
+        git checkout -b updates
+        git pull
+
+    - name: Build project
+      run: yarn build
+
+    - name: Run tests
+      run: yarn test
+
+    - name: Run push script
+      run: |
+        chmod +x ./push.sh
+        ./push.sh
+
+    - name: Create pull request
+      run: yarn pr
